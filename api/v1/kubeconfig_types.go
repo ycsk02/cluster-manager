@@ -68,17 +68,18 @@ type KubeconfigContext struct {
 	User      string `json:"user" yaml:"user"`
 }
 
+type KubeconfigPreferences struct {
+}
+
 type KubeConfigSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	APIVersion     string                   `json:"apiVersion" yaml:"apiVersion"`
-	Kind           string                   `json:"kind" yaml:"kind"`
 	Clusters       []KubeconfigNamedCluster `json:"clusters" yaml:"clusters"`
 	Users          []KubeconfigUser         `json:"users" yaml:"users"`
 	Contexts       []KubeconfigNamedContext `json:"contexts" yaml:"contexts"`
 	CurrentContext string                   `json:"current-context" yaml:"current-context"`
-	Preferences    string                   `json:"preferences,omitempty" yaml:"preferences,omitempty"`
+	Preferences    KubeconfigPreferences    `json:"preferences,omitempty" yaml:"preferences,omitempty"`
 }
 
 // KubeConfigStatus defines the observed state of KubeConfig
