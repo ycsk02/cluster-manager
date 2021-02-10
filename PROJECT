@@ -1,0 +1,9 @@
+domain: sukai.io
+layout: go.kubebuilder.io/v2
+projectName: cluster-manager-2
+repo: github.com/ycsk02/cluster-manager
+resources:
+- group: manager
+  kind: KubeConfig
+  version: v1
+version: 3-alpha
