@@ -52,7 +52,7 @@ type KubeconfigNamedCluster struct {
 type KubeconfigCluster struct {
 	Server                   string `json:"server" yaml:"server"`
 	CertificateAuthorityData string `json:"certificate-authority-data" yaml:"certificate-authority-data"`
-	CertificateAuthority     string `json:"certificate-authority" yaml:"certificate-authority"`
+	CertificateAuthority     string `json:"certificate-authority" yaml:"certificate-authority,omitempty"`
 }
 
 // KubeconfigNamedContext is a struct used to create a kubectl configuration YAML file
