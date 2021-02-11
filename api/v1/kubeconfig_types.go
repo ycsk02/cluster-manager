@@ -33,7 +33,7 @@ type KubeconfigUser struct {
 type KubeconfigUserKeyPair struct {
 	ClientCertificateData string                 `json:"client-certificate-data" yaml:"client-certificate-data"`
 	ClientKeyData         string                 `json:"client-key-data" yaml:"client-key-data"`
-	AuthProvider          KubeconfigAuthProvider `json:"auth-provider" yaml:"auth-provider,omitempty"`
+	AuthProvider          KubeconfigAuthProvider `json:"auth-provider,omitempty" yaml:"auth-provider,omitempty"`
 }
 
 // KubeconfigAuthProvider is a struct used to create a kubectl authentication provider
@@ -52,7 +52,7 @@ type KubeconfigNamedCluster struct {
 type KubeconfigCluster struct {
 	Server                   string `json:"server" yaml:"server"`
 	CertificateAuthorityData string `json:"certificate-authority-data" yaml:"certificate-authority-data"`
-	CertificateAuthority     string `json:"certificate-authority" yaml:"certificate-authority,omitempty"`
+	CertificateAuthority     string `json:"certificate-authority,omitempty" yaml:"certificate-authority,omitempty"`
 }
 
 // KubeconfigNamedContext is a struct used to create a kubectl configuration YAML file
@@ -64,7 +64,7 @@ type KubeconfigNamedContext struct {
 // KubeconfigContext is a struct used to create a kubectl configuration YAML file
 type KubeconfigContext struct {
 	Cluster   string `json:"cluster" yaml:"cluster"`
-	Namespace string `json:"namespace" yaml:"namespace,omitempty"`
+	Namespace string `json:"namespace,omitempty" yaml:"namespace,omitempty"`
 	User      string `json:"user" yaml:"user"`
 }
 
